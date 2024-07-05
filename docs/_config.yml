@@ -40,6 +40,15 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 
+
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Projects"
+    url: "/about/"
+  - title: "Resume"
+    url: "/files/resume.pdf"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
