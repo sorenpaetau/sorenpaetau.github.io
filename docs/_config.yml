@@ -42,11 +42,13 @@ kramdown:
 
 
 navigation:
-  - title: "Home"
+  - title: "home"
     url: "/"
-  - title: "Projects"
-    url: "/about/"
-  - title: "Resume"
+  - title: "projects"
+    url: "/projects/"
+  - title: "classes"
+    url: "/classes/"
+  - title: "resume"
     url: "/files/resume.pdf"
 
 # Exclude from processing.
