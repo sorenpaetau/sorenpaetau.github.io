@@ -1,0 +1,9 @@
+navigation:
+  - title: "home"
+    url: "/"
+  - title: "projects"
+    url: "/projects/"
+  - title: "classes"
+    url: "/classes/"
+  - title: "resume"
+    url: "/files/resume.pdf"

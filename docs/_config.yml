@@ -41,15 +41,6 @@ kramdown:
   syntax_highlighter: rouge
 
 
-navigation:
-  - title: "home"
-    url: "/"
-  - title: "projects"
-    url: "/projects/"
-  - title: "classes"
-    url: "/classes/"
-  - title: "resume"
-    url: "/files/resume.pdf"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
