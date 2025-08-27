@@ -1,66 +1,50 @@
 ---
 layout: single
-permalink: /projects/spotify-user-analysis/
-title: "Spotify User Analysis — Machine Learning Insights from Listening Habits"
-excerpt: "Applied classical ML algorithms (C4.5, KNN) to public Spotify datasets to analyze user listening patterns and behavior, with comprehensive data preprocessing and LaTeX reporting."
+permalink: /projects/spotify/
+title: "Spotify Listener Insights — Classic ML for Recommendations & Genre Analysis"
+excerpt: "Public Spotify data → association rules, clustering, and genre prediction. Implemented classic algorithms from scratch and delivered a LaTeX report with clear, data-driven takeaways."
 date: 2025-08-27
 categories: [Projects]
-tags: [Machine Learning, Data Analysis, C4.5, KNN, Spotify]
+tags: [Recommender Systems, KDD, Random Forest, C4.5, KMeans, DBSCAN, LaTeX]
 classes: wide
 author_profile: true
 read_time: false
 toc: true
 toc_sticky: true
 header:
-  overlay_image: /assets/img/projects/spotify/banner.webp
+  overlay_image: /assets/img/projects/spotify-ml/banner.webp
   overlay_filter: 0.35
-teaser: /assets/img/projects/spotify/teaser.webp
-role: "Data Scientist & ML Engineer"
-client: "Academic Research Project"
-stack: [Python, C4.5, KNN, Data Preprocessing, LaTeX, Statistical Analysis]
+teaser: /assets/img/projects/spotify-ml/teaser.webp
+role: "AI Solutions Engineer (Team Lead, Applied ML)"
+client: "Cal Poly — CSC 466 (team of five)"
+stack: [Python, pandas, NumPy, scikit-learn, Apriori, C4.5, RandomForest, KMeans, DBSCAN, LaTeX]
 links:
-  - label: "Final Report (PDF)"
+  - label: "Report (PDF)"
     icon: "fas fa-file-pdf"
-    url: "/assets/demos/spotify/spotify-report.pdf"
+    url: "/assets/demos/spotify-ml/spotifyreport.pdf"
 ---
 
 {: .notice--primary}
 **TL;DR**  
-**Problem:** Understand user listening habits and behavior patterns from Spotify data using classical machine learning approaches.  
-**Solution:** Implemented **C4.5 decision trees** and **K-Nearest Neighbors (KNN)** algorithms on public Spotify datasets, with comprehensive data preprocessing and feature engineering.  
-**Impact:** Generated data-driven insights about user behavior, created formal LaTeX report, and demonstrated practical application of classical ML algorithms to real-world music streaming data.
+**Problem:** Understand and predict Spotify listening behavior using public datasets.  
+**Solution:** From-scratch classic ML: C4.5, Random Forest, KNN (adj-weighted), KMeans/DBSCAN, and Apriori—plus a full LaTeX write-up.  
+**Impact:** Random Forest outperformed C4.5 on test accuracy (~**50.2%** vs **43.1%**); KMeans cleanly separated **EDM/Rap/R&B**; association rules showed many paths **end in Pop**—useful for playlisting and marketing.
 
 ## Who this helps
-- Music streaming platforms seeking to understand user behavior patterns
-- Data scientists working with streaming service analytics
-- Researchers studying digital music consumption patterns
+- **Recsys & Data PMs:** validates which classic methods reliably separate genres and where they fail.
+- **Product & Marketing:** highlights **cross-genre switching** (e.g., many paths lead to **Pop**) for playlisting and campaigns.
 
 ## My role
-- Led data preprocessing and feature engineering efforts
-- Implemented C4.5 and KNN algorithms from scratch
-- Coordinated team of four peers in data analysis and reporting
-- Created comprehensive LaTeX documentation
+- Led **problem framing → data prep → modeling → evaluation → report**.
+- Implemented and compared **C4.5** vs **Random Forest**, tuned KMeans/DBSCAN, and built **Apriori** association analysis.
+- Owned the **LaTeX** write-up and stakeholder-friendly visuals.
 
-## Data & methodology
-- **Source:** Public Spotify datasets containing user listening habits
-- **Algorithms:** C4.5 decision trees and K-Nearest Neighbors (KNN)
-- **Preprocessing:** Data cleaning, feature engineering, and normalization
-- **Analysis:** Pattern recognition and user behavior classification
-
-## Technical implementation
-- **C4.5 Algorithm:** Decision tree implementation for classification tasks
-- **KNN Algorithm:** K-nearest neighbors for pattern recognition
-- **Data Preprocessing:** Cleaning, feature selection, and normalization
-- **Validation:** Cross-validation and performance metrics
-
-## Results & insights
-- Successfully identified key patterns in user listening behavior
-- Generated actionable insights for understanding music consumption
-- Created comprehensive documentation and formal report
-- Demonstrated practical application of classical ML algorithms
-
-## What I'd do next
-- Explore additional ML algorithms (Random Forest, SVM)
-- Implement real-time analysis capabilities
-- Develop predictive models for user behavior
-- Create interactive visualizations for insights 
+## Architecture
+```ascii
+[Public Spotify datasets] 
+    → [Preprocess/normalize, select features] 
+    → [Supervised: C4.5, Random Forest] ──→ [Per-genre metrics]
+    → [Unsupervised: KMeans, DBSCAN] ────→ [Cluster quality/coverage]
+    → [Association Rules: Apriori] ───────→ [Cross-genre switching]
+    → [Collaborative Filtering: Adjusted-Weighted KNN] → [Per-genre MAE]
+    → [LaTeX report]
