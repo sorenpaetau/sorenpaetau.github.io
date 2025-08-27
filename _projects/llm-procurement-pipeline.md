@@ -6,7 +6,7 @@ tags: [LLM, LangChain, OpenAI, LaTeX]
 weight: 1
 links:
   - text: "GitHub"
-    url: "https://github.com/YOUREPO"
+    url: "https://github.com/sorenpaetau/llm-procurement-pipeline"
   - text: "Demo PDF"
     url: "/assets/demos/procurement_sample.pdf"
 ---

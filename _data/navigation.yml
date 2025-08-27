@@ -2,12 +2,12 @@ main:
   - title: "Home"
     url: "/"
   - title: "Projects"
-    url: /projects/
+    url: "/projects/"
   - title: "Writing"
-    url: /writing/
+    url: "/writing/"
   - title: "About"
-    url: /about/
-  - title: "Courses"
-    url: /courses/
+    url: "/about/"
+  - title: "Classes"
+    url: "/classes/"
   - title: "Resume"
-    url: /files/resume.pdf
+    url: "/files/resume.pdf"

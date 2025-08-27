@@ -10,23 +10,23 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Spotify Listener Insights — Classic ML for Recommendations &amp; Genre Analysis - Soren Paetau</title>
-<meta name="description" content="Public Spotify data → association rules, clustering, and genre prediction. Implemented classic algorithms from scratch and delivered a LaTeX report with clear, data-driven takeaways.">
+<!-- begin _includes/seo.html --><title>D.E.A.D — Iowa Liquor Sales Analysis for Advocacy Targeting - Soren Paetau</title>
+<meta name="description" content="Ridge regression on Iowa Liquor Sales with city–day grouping and interpretable features (holidays, season, day-of-week, population, college towns) to quantify when/where alcohol purchases spike.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Soren Paetau">
-<meta property="og:title" content="Spotify Listener Insights — Classic ML for Recommendations &amp; Genre Analysis">
-<meta property="og:url" content="http://localhost:4000/projects/spotify/">
+<meta property="og:title" content="D.E.A.D — Iowa Liquor Sales Analysis for Advocacy Targeting">
+<meta property="og:url" content="http://localhost:4000/projects/dead-liquor-analysis/">
 
 
-  <meta property="og:description" content="Public Spotify data → association rules, clustering, and genre prediction. Implemented classic algorithms from scratch and delivered a LaTeX report with clear, data-driven takeaways.">
+  <meta property="og:description" content="Ridge regression on Iowa Liquor Sales with city–day grouping and interpretable features (holidays, season, day-of-week, population, college towns) to quantify when/where alcohol purchases spike.">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/assets/img/projects/spotify-ml/banner.webp">
+  <meta property="og:image" content="http://localhost:4000/assets/img/projects/dead/banner.webp">
 
 
 
@@ -39,7 +39,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/projects/spotify/">
+<link rel="canonical" href="http://localhost:4000/projects/dead-liquor-analysis/">
 
 
 
@@ -164,18 +164,18 @@
 
 
 <div class="page__hero--overlay"
-  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/assets/img/projects/spotify-ml/banner.webp');"
+  style=" background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/assets/img/projects/dead/banner.webp');"
 >
   
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Spotify Listener Insights — Classic ML for Recommendations &amp; Genre Analysis
+          D.E.A.D — Iowa Liquor Sales Analysis for Advocacy Targeting
 
         
       </h1>
       
-        <p class="page__lead">Public Spotify data → association rules, clustering, and genre prediction. Implemented classic algorithms from scratch and delivered a LaTeX report with clear, data-driven takeaways.
+        <p class="page__lead">Ridge regression on Iowa Liquor Sales with city–day grouping and interpretable features (holidays, season, day-of-week, population, college towns) to quantify when/where alcohol purchases spike.
 </p>
       
       
@@ -282,8 +282,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Spotify Listener Insights — Classic ML for Recommendations &amp; Genre Analysis">
-    <meta itemprop="description" content="Public Spotify data → association rules, clustering, and genre prediction. Implemented classic algorithms from scratch and delivered a LaTeX report with clear, data-driven takeaways.">
+    <meta itemprop="headline" content="D.E.A.D — Iowa Liquor Sales Analysis for Advocacy Targeting">
+    <meta itemprop="description" content="Ridge regression on Iowa Liquor Sales with city–day grouping and interpretable features (holidays, season, day-of-week, population, college towns) to quantify when/where alcohol purchases spike.">
     <meta itemprop="datePublished" content="2025-08-27T00:00:00-07:00">
     
 
@@ -295,37 +295,56 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#who-this-helps">Who this helps</a></li><li><a href="#my-role">My role</a></li><li><a href="#architecture">Architecture</a></li></ul>
+              <ul class="toc__menu"><li><a href="#who-this-helps">Who this helps</a></li><li><a href="#my-role">My role</a></li><li><a href="#data--features">Data &amp; features</a></li><li><a href="#model--validation">Model &amp; validation</a></li><li><a href="#results">Results</a></li><li><a href="#architecture">Architecture</a></li></ul>
             </nav>
           </aside>
         
         <p class="notice--primary"><strong>TL;DR</strong><br />
-<strong>Problem:</strong> Understand and predict Spotify listening behavior using public datasets.<br />
-<strong>Solution:</strong> From-scratch classic ML: C4.5, Random Forest, KNN (adj-weighted), KMeans/DBSCAN, and Apriori—plus a full LaTeX write-up.<br />
-<strong>Impact:</strong> Random Forest outperformed C4.5 on test accuracy (~<strong>50.2%</strong> vs <strong>43.1%</strong>); KMeans cleanly separated <strong>EDM/Rap/R&amp;B</strong>; association rules showed many paths <strong>end in Pop</strong>—useful for playlisting and marketing.</p>
+<strong>Problem:</strong> Where and when should D.E.A.D. focus outreach to reduce excessive drinking?<br />
+<strong>Solution:</strong> Built an interpretable <strong>ridge regression</strong> on <strong>Iowa Liquor Sales</strong>, grouped by <strong>city × date</strong>, with features for <strong>10-days-pre-holiday, season, day-of-week, population bracket, college-town</strong>; tuned by <strong>5-fold CV</strong>.<br />
+<strong>Impact:</strong> Final model achieved <strong>R² ≈ 0.43</strong>, quantifying spikes (e.g., <strong>pre-holiday</strong>, <strong>Thursdays</strong>) and dips (<strong>Sundays</strong>, <strong>winter</strong>) and providing a data-backed playbook for campaign timing and location.</p>
 
 <h2 id="who-this-helps">Who this helps</h2>
 <ul>
-  <li><strong>Recsys &amp; Data PMs:</strong> validates which classic methods reliably separate genres and where they fail.</li>
-  <li><strong>Product &amp; Marketing:</strong> highlights <strong>cross-genre switching</strong> (e.g., many paths lead to <strong>Pop</strong>) for playlisting and campaigns.</li>
+  <li>Advocacy leaders planning outreach calendars and city targeting.</li>
+  <li>Policy &amp; operations teams needing clear, defensible coefficients rather than black-box scores.</li>
 </ul>
 
 <h2 id="my-role">My role</h2>
 <ul>
-  <li>Led <strong>problem framing → data prep → modeling → evaluation → report</strong>.</li>
-  <li>Implemented and compared <strong>C4.5</strong> vs <strong>Random Forest</strong>, tuned KMeans/DBSCAN, and built <strong>Apriori</strong> association analysis.</li>
-  <li>Owned the <strong>LaTeX</strong> write-up and stakeholder-friendly visuals.</li>
+  <li>Led data prep, feature engineering, and model selection; evaluated grouping strategies; produced LaTeX deliverables and executive-level summaries.</li>
+</ul>
+
+<h2 id="data--features">Data &amp; features</h2>
+<ul>
+  <li>Source: Iowa Liquor Sales (store-level orders with categories, volumes, prices).</li>
+  <li>Engineered features: <strong>10-Days-Before-Holiday</strong>, <strong>Major-College-Town</strong> (Ames/Iowa City), <strong>Season</strong>, <strong>Day-of-Week</strong>, <strong>Population Bracket</strong> (bucketed city populations).</li>
+  <li>Aggregation: <strong>grouped to city × date</strong> to capture demand at the community level rather than single stores.</li>
+</ul>
+
+<h2 id="model--validation">Model &amp; validation</h2>
+<ul>
+  <li><strong>Ridge Regression</strong> with λ = <strong>100</strong> (selected via <strong>5-fold cross-validation</strong> on R²).</li>
+  <li>Compared feature sets; chose <strong>Day-of-Week over Weekend</strong>, <strong>Population Bracket over raw population</strong>, and <strong>10-Days-Before-Holiday over Holiday</strong>.</li>
+  <li>Fixed train/validation splits; inspected residuals and coefficient stability.</li>
+</ul>
+
+<h2 id="results">Results</h2>
+<ul>
+  <li><strong>Goodness-of-fit:</strong> <strong>R² ≈ 0.43</strong> on city-day volumes (gallons).</li>
+  <li><strong>Pre-holiday effect:</strong> positive lift (~<strong>+20 gallons</strong> per city-day).</li>
+  <li><strong>College towns:</strong> negative coefficient (caution: correlational, not causal).</li>
+  <li><strong>Population:</strong> strong monotonic increase across brackets (largest cities <strong>+1.7k+ gallons</strong> vs smallest).</li>
+  <li><strong>Seasonality:</strong> <strong>winter</strong> lower than fall; <strong>spring</strong> slightly higher.</li>
+  <li><strong>Day-of-week:</strong> <strong>Thursday</strong> higher than Friday; <strong>Sunday</strong> markedly lower.</li>
 </ul>
 
 <h2 id="architecture">Architecture</h2>
 <p>```ascii
-[Public Spotify datasets] 
-    → [Preprocess/normalize, select features] 
-    → [Supervised: C4.5, Random Forest] ──→ [Per-genre metrics]
-    → [Unsupervised: KMeans, DBSCAN] ────→ [Cluster quality/coverage]
-    → [Association Rules: Apriori] ───────→ [Cross-genre switching]
-    → [Collaborative Filtering: Adjusted-Weighted KNN] → [Per-genre MAE]
-    → [LaTeX report]</p>
+[Iowa Liquor Sales] → [Clean &amp; join population/holidays] 
+                    → [City×Date aggregation] 
+                    → [FE: season, DOW, pre-holiday, college-town, population bracket]
+                    → [Ridge Regression (CV/λ=100)] → [Coefficient-based insights]</p>
 
         
       </section>
@@ -346,10 +365,10 @@
       
   <nav class="pagination">
     
-      <a href="/projects/research/" class="pagination--pager" title="Assorted Research Projects">Previous</a>
+      <a href="/projects/dead/" class="pagination--pager" title="">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/projects/current/" class="pagination--pager" title="Current">Next</a>
     
   </nav>
 
