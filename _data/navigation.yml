@@ -1,9 +1,13 @@
-navigation:
-  - title: "home"
+main:
+  - title: "Home"
     url: "/"
-  - title: "projects"
-    url: "/projects/"
-  - title: "classes"
-    url: "/classes/"
-  - title: "resume"
-    url: "/files/resume.pdf"
+  - title: "Projects"
+    url: /projects/
+  - title: "Writing"
+    url: /writing/
+  - title: "About"
+    url: /about/
+  - title: "Courses"
+    url: /courses/
+  - title: "Resume"
+    url: /files/resume.pdf
