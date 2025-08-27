@@ -6,6 +6,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/projects/dead/</loc>
+<lastmod>2025-08-27T15:34:16-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/dead-liquor-analysis/</loc>
@@ -13,13 +14,15 @@
 </url>
 <url>
 <loc>http://localhost:4000/projects/current/</loc>
+<lastmod>2025-08-27T15:34:16-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/llm-procurement-pipeline/</loc>
-<lastmod>2025-08-27T15:25:24-07:00</lastmod>
+<lastmod>2025-08-27T15:34:16-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/research/</loc>
+<lastmod>2025-08-27T15:34:16-07:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/spotify/</loc>
